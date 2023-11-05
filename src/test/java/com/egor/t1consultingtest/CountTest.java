@@ -1,7 +1,7 @@
 package com.egor.t1consultingtest;
 
+import com.egor.t1consultingtest.service.CountService;
 import com.egor.t1consultingtest.service.impl.CountServiceImpl;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -10,12 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CountTest {
-    private CountServiceImpl countService;
-
-    @BeforeEach
-    public void preTestSetup() {
-        countService = new CountServiceImpl();
-    }
+    private final CountService countService = new CountServiceImpl();
 
     @Test
     public void test1() {
