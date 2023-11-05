@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CountTest {
-    private final CountService countService = new CountServiceImpl();
+    private static final CountService countService = new CountServiceImpl();
 
     @Test
     public void test1() {
