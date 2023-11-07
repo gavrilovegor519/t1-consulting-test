@@ -14,8 +14,6 @@ Example output result: “a”: 5, “c”: 4, “b”: 1
 
 ### Important URLs
 
-OpenAPI Docs: `/api/api-docs.html`
-
-API Context: `/api`
+OpenAPI Docs (Swagger-UI): `/api-docs.html`
 
 Count endpoint: `/api/count`
