@@ -1,5 +1,6 @@
 package com.egor.t1consultingtest;
 
+import com.egor.t1consultingtest.dto.CountDto;
 import com.egor.t1consultingtest.service.CountService;
 import com.egor.t1consultingtest.service.impl.CountServiceImpl;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,8 @@ public class CountTest {
 
     @Test
     public void test1() {
-        Map<Character, Integer> charMap = countService.count("aaaaabcccc");
+        CountDto countDto = new CountDto("aaaaabcccc");
+        Map<Character, Integer> charMap = countService.count(countDto);
 
         assertEquals(charMap.get('a'), 5);
         assertEquals(charMap.get('b'), 1);
@@ -23,7 +25,8 @@ public class CountTest {
 
     @Test
     public void test2() {
-        Map<Character, Integer> charMap = countService.count("");
+        CountDto countDto = new CountDto("");
+        Map<Character, Integer> charMap = countService.count(countDto);
 
         assertTrue(charMap.isEmpty());
     }
